@@ -30,7 +30,9 @@ async def on_ready():
         await Bot.change_presence( status = discord.Status.online, activity = discord.Activity(type = discord.ActivityType.watching, name = f"{len(Bot.guilds)} серверов!") )
         await asyncio.sleep(8)
         await Bot.change_presence( status = discord.Status.online, activity = activity )
+        
 @Bot.command()
+@commands.cooldown(1, 99999999999999999999, commands.BucketType.user)
 async def whitelist(ctx, nick = None):
     channel = Bot.get_channel( 755862633172959283 )
     if nick is None:
