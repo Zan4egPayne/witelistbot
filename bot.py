@@ -33,7 +33,7 @@ async def on_ready():
         
 @Bot.command()
 async def whitelist(ctx, nick = None):
-    channel = Bot.get_channel( 756458679129341962 )
+    channel = Bot.get_channel( 756515896620613634 )
     if nick is None:
         await ctx.send(f"**{ctx.author}**, укажите ник сервера майнкрафт \n Пример команды: ***m.whitelist ``Ник``***")
     else:
